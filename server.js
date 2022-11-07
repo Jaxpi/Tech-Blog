@@ -1,13 +1,12 @@
-import express from 'express';
-import { engine } from 'express-handlebars';
-
 const express = require('express');
+const { create } = require('express-handlebars');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
 const session = require('express-session')
 var SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
+const hbs = exphbs.create({});
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
