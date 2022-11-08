@@ -1,9 +1,10 @@
-const { UUIDV4, Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
-class Users extends Model {}
+class User extends Model {}
 
-Users.init(
+User.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,25 +13,29 @@ Users.init(
       autoIncrement: true,
     },
     user_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
+      type: DataTypes.STRING,
     },
     password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1],
-        },
+      type: DataTypes.STRING,
     },
   },
   {
+    hooks: {
+        async beforeCreate(newUserData) {
+          newUserData.password = await bcrypt.hash(newUserData.password, 10);
+          return newUserData;
+        },
+        async beforeUpdate(newUserData) {
+            newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            return newUserData;
+        },
+      },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'users',
+    modelName: 'User',
   }
 );
 
-module.exports = Users;
+module.exports = User;

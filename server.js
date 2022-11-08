@@ -6,14 +6,13 @@ const session = require('express-session')
 var SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
-const hbs = exphbs.create({});
+const hbs = create({});
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.engine('handlebars', engine());
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-app.set('views', './views');
 
 // turn on routes
 app.use(routes);
