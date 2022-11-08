@@ -1,9 +1,7 @@
 [
     {
-      "dish_name": "French Bread with Brie Cheese",
-      "description": "French baguette with warm brie",
-      "guest_name": "Ivan",
-      "has_nuts": false
-    },
-  ]
+      "user_name": "Sample User 1",
+      "password": "Sample Password 1"
+    }
+]
   
