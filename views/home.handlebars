@@ -1,6 +1,14 @@
-<h1>Tech Blog: Home</h1>
 {{#if loggedIn}}
-<h2>Logged In</h2>
-{{else}}
-<h2>Not Logged In</h2>
-{{/if}}
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Dashboard</a>
+      <a href="#">Logout</a>
+    </nav>
+<h1>Tech Blog: Home</h1>
+<section class="flex-row justify-center">
+    <h2>Logged In</h2>
+    {{else}}
+    <h2>Please Log-In to Continue</h2>
+    <a href="#">Login</a>
+    {{/if}}
+</section>
