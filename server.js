@@ -9,6 +9,14 @@ const app = express();
 const hbs = create({});
 const PORT = process.env.PORT || 3001;
 
+const sess = {
+  secret: 'Super secret secret',
+  resave: false,
+  saveUninitialized: true,
+};
+
+app.use(session(sess));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.engine('handlebars', hbs.engine);
