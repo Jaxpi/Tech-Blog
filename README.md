@@ -1,6 +1,9 @@
 # Tech-Blog
 
+https://jaxpi-tech-blog.herokuapp.com
+
 https://jaxpi.github.io/Tech-Blog/
+
 <br><img src="assets/images/mainscreenshot.jpg" style="width:300px; height auto;">
 
 ## Description
