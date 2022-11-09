@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+    background-color: aqua;
 }
 
 body {
@@ -9,5 +9,13 @@ body {
 }
 
 h1 {
+    border: 2px solid red;
+}
+
+h2 {
+    border: 2px solid red;
+}
+
+.login-card {
     border: 2px solid red;
 }
