@@ -1,14 +1,18 @@
 {{#if loggedIn}}
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Dashboard</a>
-      <a href="#">Logout</a>
-    </nav>
+    <a href="/">Home</a>
+    <a href="/">Dashboard</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
 <h1>Tech Blog: Home</h1>
 <section class="flex-row justify-center">
     <h2>Logged In</h2>
     {{else}}
     <h2>Please Log-In to Continue</h2>
-    <a href="#">Login</a>
+    <a href="/login">Login</a>
     {{/if}}
 </section>
