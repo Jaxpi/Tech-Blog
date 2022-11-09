@@ -5,17 +5,13 @@ https://jaxpi.github.io/Tech-Blog/
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
+This application allows users to log in, post blog messages, comment on posts, and log out. When visiting the site for the first time, users are presented with the homepage, which includes existing blog posts, navigation links for the homepage and the dashboard, and the option to log in.
+When the user attempts to visit any other pages a prompt appears to allow the user to either log in or sign up. The user either enters or creates a username and password.
+When the user is signed in to the site then they are able to view all posts and comments, as well as make posts and comments of their own.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Users visit the site and either log in with their existing username and password or sign up and create new ones. The user then views the previously created posts and may add comments on them. The user clicks on the button to create a new post and enters text into the provided fields. Upon clicking save post, the post will be displayed along with the others and will include the user's name and the date the post was created. The user may also revisit their previously created posts and edit them. The user may also sign out at any time to protect their posts and comments.
 
 ## License
 
