@@ -1,13 +1,13 @@
-    <nav>
-    <a href="/">Home</a>
-    <a href="/">Dashboard</a>
-    {{#if loggedIn}}
+<nav>
+  <a href="/">Home</a>
+  <a href="/">Dashboard</a>
+  {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
     <h1>Tech Blog: Home</h1>
     <h2>Logged In</h2>
-    {{else}}
+  {{else}}
     <h1>Tech Blog: Home</h1>
     <h2>Please Log-In to Continue</h2>
     <a href="/login">Login</a>
-    {{/if}}
-  </nav>
+  {{/if}}
+</nav>
