@@ -28,4 +28,12 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+router.get('/newpost', (req, res) => {
+    if (!req.session.loggedIn) {
+      res.redirect('/login');
+      return;
+    }
+    res.render('newpost');
+});
+
 module.exports = router

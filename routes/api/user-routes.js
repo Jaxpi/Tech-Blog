@@ -15,4 +15,6 @@ router.post('/', async (req, res) => {
     }
 })
 
+//post route to log in - un and pw - then direct to dash or login again
+
 module.exports = router;

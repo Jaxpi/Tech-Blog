@@ -11,3 +11,20 @@
     <a href="/login">Login</a>
   {{/if}}
 </nav>
+
+<section>
+  <a href="/newpost"><h2>Create New Post</h2></a>
+</section>
+
+<section>
+  {{#each posts}}
+    <div>
+      <h3>
+        {{this.post_title}}
+      </h3>
+      <p>
+        {{this.post_content}}
+      </p>
+    </div>
+  {{/each}}
+</section>
