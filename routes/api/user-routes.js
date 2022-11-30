@@ -16,5 +16,19 @@ router.post('/', async (req, res) => {
 })
 
 //post route to log in - un and pw - then direct to dash or login again
+router.post('/', async (req, res) => {
+    try {
+        let username = req.body.username;
+        let password = req.body.password;
+        res.send(`Username: ${username} Password: ${password}`);
+        console.log("something", req.session.loggedIn);
+        res.render('home', {
+            posts: content,
+            loggedIn: req.session.loggedIn,
+        });
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
 
 module.exports = router;
