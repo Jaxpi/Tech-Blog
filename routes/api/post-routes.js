@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
-    const newPost = await Post.create(req.body)
+    Post.findAll()
     res.json(newPost)
     } catch (err) {
         res.status(500).json(err)
