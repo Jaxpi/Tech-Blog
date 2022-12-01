@@ -9,9 +9,9 @@ router.get('/', async (req, res) => {
               attributes: ['user_name']
             }]
         })
-        console.log("something", req.session.loggedIn);
+        console.log(content);
         res.render('home', {
-            posts: content,
+            Post: content,
             loggedIn: req.session.loggedIn,
         });
     } catch (err) {
